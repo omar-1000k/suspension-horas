@@ -18,4 +18,4 @@ RUN pip install -r requirements.txt
 # Para entornos con múltiples núcleos de CPU, aumente la cantidad de workers 
 # para que sea igual a los núcleos disponibles. 
 # El tiempo de espera se establece en 0 para deshabilitar los tiempos de espera de los workes y permitir que Cloud Run maneje el escalado de instancias.
-CMD streamlit run --server.port 8080 --host=0.0.0.0 streamlit_app.py
+CMD streamlit run --server.port 8080 --server.host=0.0.0.0 streamlit_app.py
