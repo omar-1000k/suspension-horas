@@ -1,4 +1,4 @@
-FROM python:311
+FROM python:3.11.5
 
 # Permitir que las declaraciones y los mensajes de registro aparezcan inmediatamente en los registros de Knative
 ENV PYTHONUNBUFFERED True
