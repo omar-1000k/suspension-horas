@@ -1,0 +1,16 @@
+---
+version: "2"
+services:
+  duckdns:
+    image: linuxserver/duckdns
+    container_name: duckdns
+    environment:
+      - PUID=1000 #optional
+      - PGID=1000 #optional
+      - TZ=America/Mexico_City
+      - SUBDOMAINS=suspension-horas
+      - TOKEN=d146b234-36be-4b01-ad2c-b2ea23059187
+      - LOG_FILE=false #optional
+    volumes:
+      - /path/to/appdata/config:/config #optional
+    restart: unless-stopped
