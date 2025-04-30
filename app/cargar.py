@@ -2,7 +2,7 @@ from io import BytesIO
 # from openpyxl import load_workbook
 import streamlit as st
 # import pandas as pd
-from diferencia_horas import DiferenciaHoras
+from app.diferencia_horas import DiferenciaHoras
 
 st.set_page_config("OLBOX")
 st.title("Horas de suspención")

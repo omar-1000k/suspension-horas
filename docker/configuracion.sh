@@ -34,3 +34,14 @@ docker --version
 
 #Cambiar permisos del socket (si es necesario):
 sudo chmod 666 /var/run/docker.sock
+
+# detectar python 3 y reapuntar a python3.13 en macos
+sudo ln -s /usr/bin/python3.13 /usr/bin/python3
+
+#Listar las versiones de python en macos instalados
+ls -l /usr/local/bin/python*
+
+
+#selecionar la version de python 3.13 como predeterminada en macos
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.13 1
+sudo update-alternatives --config python

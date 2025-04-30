@@ -1,0 +1,8 @@
+services:
+    sustension-horas:
+        image: sustension-horas
+        container_name: sustension-horas
+        ports:
+        - "8501:8501"
+        environment:
+        - ENV=production
