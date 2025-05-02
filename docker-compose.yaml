@@ -1,8 +1,11 @@
 services:
     sustension-horas:
-        image: sustension-horas
+        build:
+            context: .  # Directorio para el Dockerfile
+            dockerfile: Dockerfile  # Nombre del Dockerfile (si no es el estándar)
+            args:  # Argumentos de construcción
+                - APP_VERSION=1.0
         container_name: sustension-horas
         ports:
         - "8501:8501"
-        environment:
-        - ENV=production
+        restart: unless-stopped
