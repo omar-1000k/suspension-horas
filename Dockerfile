@@ -7,7 +7,6 @@ EXPOSE 8501
 
 # Copie el código local a la imagen del contenedor.
 WORKDIR /
-COPY .streamlit/ /.streamlit/ 
 COPY requirements.txt /
 COPY Puebla.jpg /
 COPY login.py /

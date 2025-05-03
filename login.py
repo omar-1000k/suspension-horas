@@ -1,10 +1,10 @@
 import streamlit as st
 from app.app import principal
 
-if not st.experimental_user.is_logged_in:
+if not st.user.is_logged_in:
     st.image("Puebla.jpg")
     if st.button("Iniciar sesión"):
-        st.login("google")
+        st.login()
 else:
     if st.button("Cerrar sesión"):
         st.logout()
