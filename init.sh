@@ -11,7 +11,7 @@ docker stop sustension-horas
 docker-compose up -d
 
 # desactivar el docker-compose
-docker-compose down
+docker-compose down 
 
 
 export $(grep -v '^#' .env | xargs)
