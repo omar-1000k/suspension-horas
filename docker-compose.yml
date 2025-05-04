@@ -1,11 +1,26 @@
+# El siguiente bloque es un ejemplo de cómo se usa una imagen preconstruida, para este caso, la imagen "suspension-horas:1.0-amd64".
+# la imagen es con una arquitectura amd64
 services:
-    sustension-horas:
-        build:
-            context: .  # Directorio para el Dockerfile
-            dockerfile: Dockerfile  # Nombre del Dockerfile (si no es el estándar)
-            args:  # Argumentos de construcción
-                - APP_VERSION=1.0
+    sustension-horas-amd64:
+        image: suspension-horas:1.0-amd64
         container_name: sustension-horas
         ports:
             - "8501:8501"
         restart: unless-stopped
+
+
+# Este ejemplo de archivo docker-compose.yml está diseñado para construir y ejecutar un contenedor Docker para una aplicación llamada "sustension-horas".
+# El contenedor se construye a partir de un Dockerfile ubicado en el mismo directorio que este archivo.
+# El contenedor se expone en el puerto 8501 y se reiniciará automáticamente a menos que se detenga manualmente.
+# services:
+#     sustension-horas:
+#         build:
+#             context: .  # Directorio para el Dockerfile
+#             dockerfile: Dockerfile  # Nombre del Dockerfile (si no es el estándar)
+#             args:  # Argumentos de construcción
+#                 - APP_VERSION=1.0
+#         container_name: sustension-horas
+#         ports:
+#             - "8501:8501"
+#         restart: unless-stopped
+

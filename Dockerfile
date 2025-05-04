@@ -11,13 +11,12 @@ COPY requirements.txt /
 COPY Puebla.jpg /
 COPY login.py /
 COPY app/ /app/
+COPY .streamlit/ /.streamlit/
 
 # crear un archivo requirements.txt vacío para que la imagen de Docker pueda ser descargada correctamente
 # Crear un archivo __init__.py vacío para que app sea reconocido como un paquete Python
 # Instalar bash en alpine
-RUN mkdir -p /.streamlit/ && \
-    touch .streamlit/secrets.toml \
-    touch /app/__init__.py \
+RUN touch /app/__init__.py \
     && pip install -r requirements.txt \
     && apk add --no-cache bash 
 
