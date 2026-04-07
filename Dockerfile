@@ -11,7 +11,7 @@ COPY requirements.txt /
 COPY Puebla.jpg /
 COPY login.py /
 COPY app/ /app/
-COPY .streamlit/ /.streamlit/
+# COPY .streamlit/ /.streamlit/
 
 # crear un archivo requirements.txt vacío para que la imagen de Docker pueda ser descargada correctamente
 # Crear un archivo __init__.py vacío para que app sea reconocido como un paquete Python
